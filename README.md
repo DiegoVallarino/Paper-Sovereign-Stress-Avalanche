@@ -110,12 +110,6 @@ latam-soc-embi/
 │   ├── T11_network_predictive_association.tex
 │   └── T12_hypothesis_summary.tex
 │
-├── paper/                           Main paper LaTeX source
-│   ├── main.tex
-│   ├── references.bib
-│   ├── T*.tex                       Local copies of tables
-│   └── fig*.png                     Local copies of figures
-│
 ├── supplementary/                   Supplementary material LaTeX source
 │   ├── supplementary.tex
 │   ├── references.bib
