@@ -25,8 +25,8 @@ INPUT:
     secondary analyses, NOT to drive the dynamics).
 
 OUTPUT:
-  - /home/diego/Escritorio/figures/ (or Windows path on Escritorio)
-  - /home/diego/Escritorio/data_latam_fiscal/
+  - /home/user/Escritorio/figures/ (or Windows path on Escritorio)
+  - /home/user/Escritorio/data_latam_fiscal/
 
 PAPER NARRATIVE:
   This is now an EMPIRICAL paper. Title candidates:
