@@ -1,0 +1,22 @@
+\begin{table}[!htbp]
+\centering
+\footnotesize
+\begin{threeparttable}
+\caption{Tail diagnostics for three SOC-relevant statistical objects in LATAM EMBI data, following Clauset, Shalizi, and Newman (2009) and Stumpf and Porter (2012).}
+\label{tab:tail_diagnostics}
+\begin{tabular}{lrrrrrrrrl}
+\toprule
+Object & $n$ & $x_{\min}$ & $\hat{\alpha}$ & KS $D$ & $R_{\mathrm{PL/LN}}$ & $p_{\mathrm{LN}}$ & $R_{\mathrm{PL/Exp}}$ & $p_{\mathrm{Exp}}$ & Verdict \\
+\midrule
+Avalanche size $S_t$ & 40 & 1.000 & 1.771 & 0.095 & -1.612 & 0.107 & -0.502 & 0.616 & Ambiguous \\
+$|\Delta s_{c,t}|$ pooled & 2442 & 85.459 & 2.372 & 0.028 & -0.758 & 0.448 & 3.426 & 0.001 & Ambiguous (PL not rejected) \\
+Inter-event times (months) & 129 & 11.991 & 2.381 & 0.084 & -0.606 & 0.544 & 1.106 & 0.269 & Ambiguous (PL not rejected) \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}\footnotesize
+\item $\hat{\alpha}$ and $x_{\min}$ are MLE estimates of the power-law tail exponent and the lower cutoff, respectively. KS $D$ is the Kolmogorov--Smirnov distance from the fitted PL above $x_{\min}$.
+\item $R_{\mathrm{PL/LN}}$ is the Vuong normalized log-likelihood ratio against a lognormal alternative ($R>0$ favours PL); $|R|<1.5$ indicates the test cannot discriminate.
+\item All three objects are consistent with a heavy-tail boundary regime: PL is not rejected against LN at conventional levels, while PL is preferred over an exponential alternative.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

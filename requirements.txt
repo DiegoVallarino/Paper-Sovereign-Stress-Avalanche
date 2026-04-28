@@ -1,0 +1,26 @@
+# =============================================================================
+# Python dependencies for latam-soc-embi replication
+# =============================================================================
+# Tested on Python 3.11 / 3.12 (Windows, Linux, macOS).
+# Install with:  pip install -r requirements.txt
+# If pip refuses on managed Python installations:
+#                pip install -r requirements.txt --break-system-packages
+# =============================================================================
+
+# Core scientific stack
+numpy>=1.26
+pandas>=2.0
+scipy>=1.11
+
+# Power-law estimation (Clauset, Shalizi & Newman 2009)
+powerlaw>=1.5
+
+# Network analysis
+networkx>=3.1
+
+# Excel I/O for the raw EMBI input
+openpyxl>=3.1
+
+# Plotting
+matplotlib>=3.8
+seaborn>=0.13

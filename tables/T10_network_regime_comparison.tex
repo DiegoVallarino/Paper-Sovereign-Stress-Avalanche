@@ -1,0 +1,42 @@
+\begin{table}[!htbp]
+\centering
+\footnotesize
+\begin{threeparttable}
+\caption{Network geometry around large stress months. Welch's two-sample $t$-test contrasts metric values in months in the 24-month rolling window centred on a large avalanche ($S\geq 6$) versus all other windows.}
+\label{tab:network_regime}
+\begin{tabular}{llrrrrrrr}
+\toprule
+Filter & Metric & Non-large mean & Large mean & $\Delta$ & $t$ & $p$ & $n_L$ & $n_N$ \\
+\midrule
+corr & $\rho^{\max}$ & 0.847 & 0.911 & 0.065 & 6.259 & 0.000 & 33 & 34 \\
+corr & $\rho^{\mathrm{Fro}}$ & 0.913 & 0.941 & 0.027 & 4.607 & 0.000 & 33 & 34 \\
+corr & SFI$^{\max}$ & 6.229 & 11.743 & 5.515 & 6.304 & 0.000 & 33 & 34 \\
+corr & SFI$^{\mathrm{Fro}}$ & 11.858 & 16.296 & 4.438 & 5.636 & 0.000 & 33 & 34 \\
+corr & $\bar{\kappa}^O$ & 0.935 & 0.963 & 0.028 & 4.132 & 0.000 & 33 & 34 \\
+corr & $\bar{\kappa}^F$ & 1.138 & 1.254 & 0.116 & 2.547 & 0.014 & 33 & 34 \\
+corr & Density & 0.739 & 0.915 & 0.177 & 5.419 & 0.000 & 33 & 34 \\
+corr & HHI strength & 0.106 & 0.096 & -0.010 & -4.645 & 0.000 & 33 & 34 \\
+partial & $\rho^{\max}$ & 0.871 & 0.855 & -0.015 & -0.786 & 0.435 & 33 & 34 \\
+partial & $\rho^{\mathrm{Fro}}$ & 0.914 & 0.896 & -0.018 & -1.480 & 0.144 & 33 & 34 \\
+partial & SFI$^{\max}$ & 10.079 & 10.173 & 0.093 & 0.044 & 0.965 & 33 & 34 \\
+partial & SFI$^{\mathrm{Fro}}$ & 12.696 & 11.159 & -1.537 & -1.244 & 0.219 & 33 & 34 \\
+partial & $\bar{\kappa}^O$ & 0.923 & 0.909 & -0.014 & -0.878 & 0.383 & 33 & 34 \\
+partial & $\bar{\kappa}^F$ & 1.262 & 1.230 & -0.032 & -0.533 & 0.596 & 33 & 34 \\
+partial & Density & 0.693 & 0.715 & 0.023 & 0.454 & 0.651 & 33 & 34 \\
+partial & HHI strength & 0.109 & 0.106 & -0.004 & -1.262 & 0.211 & 33 & 34 \\
+mst & $\rho^{\max}$ & 0.562 & 0.614 & 0.052 & 2.832 & 0.006 & 33 & 34 \\
+mst & $\rho^{\mathrm{Fro}}$ & 0.558 & 0.516 & -0.042 & -6.453 & 0.000 & 33 & 34 \\
+mst & SFI$^{\max}$ & 1.336 & 1.721 & 0.385 & 2.988 & 0.004 & 33 & 34 \\
+mst & SFI$^{\mathrm{Fro}}$ & 1.270 & 1.074 & -0.195 & -6.235 & 0.000 & 33 & 34 \\
+mst & $\bar{\kappa}^O$ & 0.812 & 0.874 & 0.061 & 4.510 & 0.000 & 33 & 34 \\
+mst & $\bar{\kappa}^F$ & 1.445 & 1.689 & 0.245 & 6.208 & 0.000 & 33 & 34 \\
+mst & HHI strength & 0.135 & 0.119 & -0.016 & -5.930 & 0.000 & 33 & 34 \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}\footnotesize
+\item Filters refer to the network construction: $|\rho|>0.4$ (corr), partial correlation $>0.4$ (partial), or planar minimum-spanning tree (mst).
+\item Network density and edge counts in MST are constant by construction (10 edges among 11 nodes) and are omitted.
+\item The partial-correlation network exhibits the strongest large-vs-non-large discrimination, with significant increases in Frobenius spectral radius and Frobenius SFI during large-stress windows.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

@@ -1,0 +1,285 @@
+% =============================================================================
+% Supplementary Material
+% Self-Organized Criticality in Latin American Sovereign Spreads
+%
+% Diego Vallarino, Ph.D.
+% Inter-American Development Bank
+% =============================================================================
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[english]{babel}
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage{setspace}
+\onehalfspacing
+
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{threeparttable}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{amsmath, amssymb}
+\usepackage{float}
+\usepackage{caption}
+\captionsetup{font=small, labelfont=bf}
+\usepackage[round, authoryear]{natbib}
+\bibliographystyle{apalike}
+
+\usepackage[colorlinks=true, allcolors=blue!60!black]{hyperref}
+
+\renewcommand{\thesection}{S\arabic{section}}
+\renewcommand{\thetable}{S\arabic{table}}
+\renewcommand{\thefigure}{S\arabic{figure}}
+
+\title{Supplementary Material to\\
+\textbf{Self-Organized Criticality in Latin American Sovereign Spreads:\\
+Avalanche Dynamics, Network Geometry, and Fragility Regimes}}
+
+\author{Diego Vallarino, Ph.D.}
+\date{April 2026}
+
+\begin{document}
+\maketitle
+
+\tableofcontents
+
+\bigskip
+
+\noindent This supplementary material contains additional tables, robustness
+checks and methodological details that complement the main paper. All section,
+table and figure references with the prefix S (e.g.\ Section S2, Table S3)
+refer to this supplementary document; references without prefix refer to the
+main paper.
+
+% =============================================================================
+\section{Data appendix}
+\label{sec:data_appendix}
+
+\subsection{Source}
+The primary data source is the J.P.~Morgan EMBI Global Diversified index,
+monthly stripped spreads in basis points, obtained from a licensed Bloomberg
+terminal. The EMBI Global Diversified caps individual country weights at 10\%
+of the index total, providing more proportionate representation than the
+standard EMBI Global \citep{Longstaff2011}. Stripped spreads exclude the
+collateralized portion of Brady bonds and represent the pure sovereign credit
+risk component.
+
+\subsection{Country panel and coverage}
+The panel covers eleven LATAM sovereigns over October 2007 to April 2026
+(223 calendar months, $N=2{,}453$ observations). The full coverage statistics
+are reported in Table 1 of the main paper. We highlight three observations
+relevant to interpretation:
+
+\begin{enumerate}
+\item Argentina and Ecuador display extreme right tails reflecting
+their respective 2020 sovereign credit events. Maximum spreads reached
+3{,}803 basis points (ARG) and 5{,}129 basis points (ECU).
+\item Chile is the most stable sovereign in the panel, with a maximum
+historical spread of 392 basis points.
+\item No country has missing months. The 11 series are perfectly aligned in
+calendar time, allowing direct application of pooled time-series
+methods.
+\end{enumerate}
+
+\subsection{Data integrity checks}
+We performed three independent integrity checks. First, we verified that the
+2020 peaks for ARG and ECU coincide with documented default events. Second,
+we cross-checked the 2008 series with publicly available emerging-market
+spread aggregates from the IMF International Financial Statistics. Third,
+the time-series of cross-country mean spreads tracks the JPMorgan EMBI
+Global Diversified Index Headline reported by Bloomberg with correlation
+above 0.99.
+
+\subsection{Variable definitions}
+For country $c$ at month $t$:
+\begin{itemize}
+\item $s_{c,t}$: stripped EMBI spread in basis points.
+\item $\Delta s_{c,t} = s_{c,t} - s_{c,t-1}$: monthly change in basis points.
+\item $\Delta\log s_{c,t} = \log s_{c,t} - \log s_{c,t-1}$: monthly log change.
+\item $\hat{\sigma}_c$: standard deviation of $\Delta\log s_{c,t}$ over the full sample.
+\item Stress event: $\Delta\log s_{c,t} > \sigma\hat{\sigma}_c$, with $\sigma$ a multiplicative threshold.
+\item Avalanche size $S_t$: number of countries simultaneously stressed in month $t$.
+\item Inter-event time $\tau_{c,k}$: months between the $k$th and $(k{+}1)$th stress event of country $c$.
+\end{itemize}
+
+% =============================================================================
+\section{Detailed avalanche distribution and chronology}
+\label{sec:avalanche_detail}
+
+Tables S\ref{tab:avalanche_distribution_supp}--S\ref{tab:yearly_chronology_supp}
+provide the detailed empirical avalanche size distribution and the year-by-year
+country-by-country chronology of stress events. Both supplement the main paper
+with raw counts at full granularity. Table S\ref{tab:top_jumps_supp} reports
+the fifteen largest individual country-month spread jumps with historical
+context.
+
+\input{T02_avalanche_size_distribution}
+\renewcommand{\thetable}{S\arabic{table}}\addtocounter{table}{-1}
+
+\input{T04_yearly_chronology}
+\renewcommand{\thetable}{S\arabic{table}}\addtocounter{table}{-1}
+
+\input{T06_top_individual_jumps}
+\renewcommand{\thetable}{S\arabic{table}}\addtocounter{table}{-1}
+
+% =============================================================================
+\section{Robustness: threshold sensitivity}
+\label{sec:robustness}
+
+The choice of stress threshold $\sigma=1.5$ in the main analysis is a
+modelling decision. Table S\ref{tab:threshold_robustness_supp} reports the
+sensitivity of all quantitative findings to thresholds in
+$\sigma\in\{1.25,1.50,1.75,2.00,2.25,2.50\}$. Three observations follow.
+
+First, the estimated tail exponent $\hat{\alpha}\in[1.70, 1.83]$ for
+$\sigma\leq 2.00$, falling within the canonical SOC range $[1,3]$
+\citep{Bak1996}. The exponent rises modestly to 2.53 at $\sigma=2.25$ where
+tail truncation reduces the effective sample to six avalanche months.
+
+Second, the maximum avalanche size $S_{\max}=11$ is preserved at every
+threshold tested. The three universal-stress events (September 2008, October
+2008, March 2020) are not artefacts of threshold choice.
+
+Third, the Vuong test against lognormal continues to fail to reject
+power-law at conventional significance for all $\sigma$, confirming that the
+heavy-tail boundary regime is a robust feature of the data rather than a
+threshold-specific artefact.
+
+\input{T08_threshold_robustness}
+\renewcommand{\thetable}{S\arabic{table}}\addtocounter{table}{-1}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.85\linewidth]{fig7_threshold_robustness.png}
+\caption{Threshold robustness of avalanche evidence (visual). Estimated tail
+exponent $\hat{\alpha}$ (left axis, blue) and maximum avalanche size (right
+axis, black) as functions of the stress threshold $\sigma\in[1.25, 2.50]$.}
+\label{fig:robustness_supp}
+\end{figure}
+
+% =============================================================================
+\section{Country-level SOC: rolling tail exponent of inter-event times}
+\label{sec:country_soc}
+
+We report a complementary country-level analysis estimating, in 60-month
+rolling windows, the maximum-likelihood power-law tail exponent of country
+inter-event times $\tau_{c,k}$. The country-level analysis is exploratory
+because of the small number of stress events per country (between 7 and 18
+across the full sample), but provides additional descriptive evidence of
+heterogeneity in country-level dynamics.
+
+The country-level Pearson correlation between the country mean
+Ollivier--Ricci curvature $\bar{\kappa}^O_{c,t}$ in the correlation network
+and the country tail exponent $\hat{\alpha}^{IET}_{c,t}$ is $r=0.05$ with
+$p=0.45$. The relationship between geometry and criticality is therefore an
+aggregate, system-level property rather than one that holds country by
+country. This is consistent with sandpile theory, where critical behavior is
+an emergent feature of the global system rather than attributable to
+individual sites.
+
+% =============================================================================
+\section{Network geometry: extended diagnostics}
+\label{sec:network_appendix}
+
+Tables S\ref{tab:network_regime_supp} and S\ref{tab:network_predictive_supp}
+reproduce the network regime comparison and predictive-association tables of
+the main paper for completeness, with additional metrics not included in the
+main version.
+
+\input{T10_network_regime_comparison}
+\renewcommand{\thetable}{S\arabic{table}}\addtocounter{table}{-1}
+
+\input{T11_network_predictive_association}
+\renewcommand{\thetable}{S\arabic{table}}\addtocounter{table}{-1}
+
+\subsection{Forman--Ricci versus Ollivier--Ricci curvature}
+The two curvature measures capture different aspects of the discrete
+geometry. Forman--Ricci, computed via Equation (3) of the main paper, is a
+purely combinatorial measure that depends on local edge weights and
+neighborhood structure. Ollivier--Ricci, derived from the
+$L^1$-Wasserstein distance between neighborhood probability measures,
+captures the information transport cost between adjacent nodes. In our
+data the two measures track each other broadly but exhibit different
+sensitivities: Ollivier--Ricci is bounded in $[-1,1]$ with the unit
+baseline used here, while Forman--Ricci can exceed 1 when nodes are
+embedded in dense subgraphs.
+
+\subsection{Spectral radius normalizations}
+Two normalizations of the spectral radius are reported in Figure 4 of the
+main paper. The max-row-sum normalization, $\rho^{\max} = \lambda_{\max}/\max_i\sum_j |a_{ij}|$,
+yields a measure naturally bounded by 1 by Gershgorin's theorem. The
+Frobenius normalization, $\rho^{\mathrm{Fro}} = \lambda_{\max}/\sqrt{\sum_{ij}a_{ij}^2}$,
+captures the dominance of the principal eigenvector relative to the total
+weight in the network. The two normalizations are highly correlated in the
+data and lead to qualitatively similar conclusions.
+
+% =============================================================================
+\section{Reproducibility: software environment}
+\label{sec:reproducibility}
+
+The analysis was implemented in Python 3.11 using \texttt{pandas} 2.x,
+\texttt{numpy} 1.26+, \texttt{scipy} 1.11+, \texttt{networkx} 3.x,
+\texttt{powerlaw} 1.5, \texttt{matplotlib} 3.8+ and \texttt{seaborn} 0.13+.
+The Ollivier--Ricci LP is solved via \texttt{scipy.optimize.linprog} with
+the HiGHS interior-point solver. Bootstrap placebo replications are
+implemented with a fixed random seed (\texttt{seed=2026}) for full
+reproducibility. The replication package, including all code and CSV
+outputs, is available at the public GitHub repository
+\href{https://github.com/diegovallarino/latam-soc-embi}
+{\texttt{github.com/diegovallarino/latam-soc-embi}}.
+
+% =============================================================================
+\section{Algorithmic details}
+\label{sec:algorithms}
+
+\subsection{Power-law fit (Clauset, Shalizi, and Newman)}
+The maximum-likelihood power-law fit follows the standard procedure of
+\citet{Clauset2009}:
+\begin{enumerate}
+\item Sort the empirical sample $x_1\leq x_2\leq\cdots\leq x_n$.
+\item For each candidate $x_{\min}=x_i$, compute the conditional MLE
+$\hat{\alpha}(x_{\min})$ on the truncated sample. For continuous data,
+$\hat{\alpha}(x_{\min}) = 1 + n_{\geq}\left[\sum_{j: x_j\geq x_{\min}} \log(x_j/x_{\min})\right]^{-1}$;
+for discrete data, the analogous expression with the Hurwitz zeta function
+in the denominator.
+\item Compute the Kolmogorov--Smirnov distance $D$ between the empirical
+CCDF and the fitted power-law CCDF on the tail $x\geq x_{\min}$.
+\item Select $\hat{x}_{\min}$ that minimizes $D$. Report the corresponding
+$\hat{\alpha}$.
+\end{enumerate}
+
+\subsection{Vuong non-nested test}
+For two non-nested distributional alternatives $f_1$ (power-law) and $f_2$
+(lognormal or exponential), the normalized Vuong test statistic is
+\[
+R = \frac{\sum_{i: x_i\geq x_{\min}} \log\!\left[f_1(x_i)/f_2(x_i)\right]}
+{\sqrt{n_{\geq}}\,\hat{\sigma}_R},
+\]
+where $\hat{\sigma}_R$ is the standard deviation of the per-observation
+log-likelihood ratios. Under the null of equally-good fits, $R$ is
+asymptotically standard normal. We report two-sided $p$-values.
+
+\subsection{Ollivier--Ricci linear program}
+For an edge $(u,v)$ with neighbors $N(u)=\{u_1,\dots,u_p\}$ and
+$N(v)=\{v_1,\dots,v_q\}$, the $L^1$-Wasserstein distance between the uniform
+neighborhood measures $\mu_u$ and $\mu_v$ is the optimal transport cost:
+\begin{align*}
+W_1(\mu_u,\mu_v) = \min_{\pi\geq 0} \sum_{i,j} \pi_{ij}\,d(u_i,v_j) \quad
+\text{subject to} \quad
+& \sum_j \pi_{ij} = 1/p \;\forall i,\\
+& \sum_i \pi_{ij} = 1/q \;\forall j.
+\end{align*}
+The shortest-path distance $d(u_i,v_j)$ is computed on the graph with edge
+distances $\max(0.01,\,1-w/w_{\max})$. The Ollivier--Ricci curvature on edge
+$(u,v)$ is then $\kappa^O_{uv} = 1 - W_1(\mu_u,\mu_v)$, using a unit
+baseline. The linear program has $pq$ decision variables, $p+q$
+equality constraints, and is solved exactly via the simplex/interior-point
+method.
+
+% =============================================================================
+\bibliography{references}
+
+\end{document}

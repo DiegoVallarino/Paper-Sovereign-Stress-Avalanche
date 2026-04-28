@@ -1,0 +1,35 @@
+cff-version: 1.2.0
+title: >-
+  Self-Organized Criticality in Latin American Sovereign Spreads:
+  Avalanche Dynamics, Network Geometry, and Fragility Regimes
+message: >-
+  If you use this software or replication data, please cite it as below.
+type: software
+authors:
+  - given-names: Diego
+    family-names: Vallarino
+    email: diegoval@iadb.org
+    affiliation: >-
+      Inter-American Development Bank, Counselor to the Board of Directors
+    orcid: ""
+abstract: >-
+  Replication package for an empirical analysis of self-organized criticality
+  in Latin American sovereign credit risk using monthly J.P. Morgan EMBI
+  Global Diversified spreads (eleven LATAM economies, October 2007 to April
+  2026, N = 2453 observations). Includes the analytical pipeline,
+  paper-ready LaTeX tables, the main paper LaTeX source, and the
+  supplementary material LaTeX source.
+keywords:
+  - self-organized criticality
+  - sovereign spreads
+  - EMBI
+  - Latin America
+  - financial networks
+  - Ricci curvature
+  - spectral fragility
+  - contagion
+  - sandpile economics
+license: MIT
+version: 1.0.0
+date-released: 2026-04-28
+url: "https://github.com/diegovallarino/latam-soc-embi"
