@@ -73,7 +73,7 @@ latam-soc-embi/
 │   └── 02_generate_paper_tables.py     LaTeX tables generator
 │
 ├── data/
-│   ├── EMBI_mensual.xlsx                       Raw J.P. Morgan EMBI input
+│   ├── EMBI_mensual.xlsx                       Raw J.P. Morgan EMBI input **
 │   ├── latam_spread_panel_real_embi.csv        Cleaned panel (long format)
 │   ├── latam_avalanche_events_real.csv         Country-stress events
 │   ├── soc_intereventimes_panel_real.csv       Inter-event-time analysis
@@ -119,6 +119,7 @@ latam-soc-embi/
 └── docs/
     ├── METHODOLOGY.md               Methodological notes
     └── DATA_DICTIONARY.md           CSV column documentation
+** available upon reasonable request
 ```
 
 ## Quick start
