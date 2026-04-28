@@ -223,8 +223,7 @@ If you use this code or data, please cite:
   title  = {Self-Organized Criticality in {L}atin {A}merican Sovereign Spreads:
             Avalanche Dynamics, Network Geometry, and Fragility Regimes},
   year   = {2026},
-  note   = {Working paper, Inter-American Development Bank.
-            Sandpile Economics Program.},
+  note   = {Working paper},
   url    = {https://github.com/diegovallarino/latam-soc-embi}
 }
 ```
