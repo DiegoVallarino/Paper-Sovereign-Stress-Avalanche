@@ -1,4 +1,4 @@
-# latam-soc-embi
+# Paper Self-Organized Criticality in Latin American Sovereign Spreads
 
 **Self-Organized Criticality in Latin American Sovereign Spreads:
 Avalanche Dynamics, Network Geometry, and Fragility Regimes**
