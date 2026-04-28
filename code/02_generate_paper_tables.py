@@ -53,8 +53,8 @@ warnings.filterwarnings("ignore")
 # CONFIG  --  ADJUST PATHS FOR YOUR ENVIRONMENT
 # =============================================================================
 if sys.platform.startswith("win"):
-    DATA_DIR = Path(r"C:\Users\diego\OneDrive\Escritorio\data_latam_fiscal")
-    OUT_DIR  = Path(r"C:\Users\diego\OneDrive\Escritorio\tables_latam_fiscal")
+    DATA_DIR = Path(r"C:\Users\user\OneDrive\Escritorio\data_latam_fiscal")
+    OUT_DIR  = Path(r"C:\Users\user\OneDrive\Escritorio\tables_latam_fiscal")
 else:
     DATA_DIR = Path.home() / "Escritorio" / "data_latam_fiscal"
     OUT_DIR  = Path.home() / "Escritorio" / "tables_latam_fiscal"
