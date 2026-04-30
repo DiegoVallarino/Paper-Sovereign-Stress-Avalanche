@@ -186,7 +186,6 @@ pdflatex supplementary.tex
 | H4  | $\chi^2$ rejects uniform country participation; mid-credibility countries dominate. | Confirmed                  |
 | H5  | Strong regime difference in the correlation network; absent in partial correlation. | Partially confirmed        |
 | H6  | Three-month-ahead Pearson correlations are not significant in any network filter.   | Not supported              |
-|
 
 ## Key empirical findings
 
