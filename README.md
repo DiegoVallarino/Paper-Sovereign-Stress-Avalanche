@@ -119,6 +119,7 @@ latam-soc-embi/
 └── docs/
     ├── METHODOLOGY.md               Methodological notes
     └── DATA_DICTIONARY.md           CSV column documentation
+
 ** available upon reasonable request
 ```
 
