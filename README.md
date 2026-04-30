@@ -178,14 +178,15 @@ pdflatex supplementary.tex
 
 ## Hypotheses tested in the paper
 
-| #   | Hypothesis                                                                                       | Outcome              |
-|-----|--------------------------------------------------------------------------------------------------|----------------------|
-| H1  | Country-level participation in stress avalanches is heterogeneous.                              | Confirmed            |
-| H2  | Mid-credibility, highly traded sovereigns dominate avalanche participation.                     | Confirmed            |
-| H3  | Avalanche size, |Δs|, and inter-event times all exhibit heavy-tail boundary regime.            | Confirmed            |
-| H4  | Cross-country stress synchronization is non-trivial.                                             | Confirmed (*p*<0.001)|
-| H5  | Network geometry shifts around large stress months and predicts near-future avalanche size.     | Partially confirmed  |
-| H6  | Threshold robustness: avalanche evidence is robust to choice of σ.                              | Confirmed            |
+| #   | Empirical content                                                                 | Outcome                    |
+|-----|------------------------------------------------------------------------------------|----------------------------|
+| H1  | Heavy-tailed avalanches, $\hat{\alpha}=1.77$.                                      | Confirmed (conservative)   |
+| H2  | Reshuffling placebo: $p<0.001$ on all four statistics.                             | Confirmed (decisive)       |
+| H3  | Threshold robustness: $\hat{\alpha}\in[1.70,1.83]$ and $S_{\max}=11$ for all $\sigma$. | Confirmed                  |
+| H4  | $\chi^2$ rejects uniform country participation; mid-credibility countries dominate. | Confirmed                  |
+| H5  | Strong regime difference in the correlation network; absent in partial correlation. | Partially confirmed        |
+| H6  | Three-month-ahead Pearson correlations are not significant in any network filter.   | Not supported              |
+|
 
 ## Key empirical findings
 
